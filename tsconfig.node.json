@@ -1,0 +1,14 @@
+{
+  "extends": "@ebp/dev-configs/configs/mfe/mfe-tsconfig.node.json",
+  "include": [
+    "vite.config.ts",
+    "vitest.config.ts",
+    "package.json",
+    "scripts/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "./node_modules",
+    "./node_modules/*"
+  ]
+}

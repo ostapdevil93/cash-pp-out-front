@@ -1,0 +1,80 @@
+{
+  "name": "cash-pp-out-front",
+  "version": "0.0.1",
+  "description": "Наличные средства - Поступления - Платежное поручение (исходящее)",
+  "main": "src/index.ts",
+  "repository": "git@gitlab.dks.lanit.ru:fk-projects/ebs/modules/cash/cash-pp-out-front.git",
+  "author": "plaksenko.aleksandr@otr.ru",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite --mode dev --force",
+    "build": "vue-tsc && vite build --mode prod --base /mfe/cash-pp-out-front/",
+    "build:preview": "vue-tsc && vite build --mode dev",
+    "preview": "vite preview --strictPort --port 7150",
+    "lint": "eslint --ext .vue --ext .js --ext .ts ./src",
+    "lint:fix": "eslint --fix --ext .vue --ext .js --ext .ts ./src",
+    "test": "vitest --mode dev",
+    "test:ui": "vitest --ui --mode dev",
+    "test:once": "vitest run --mode dev",
+    "test:coverage": "vitest run --coverage --mode dev",
+    "update:check": "npx npm-check-updates /^@ebp.*$/",
+    "update:ui-kit": "yarn add -E @ebp/vue-ui-lib@latest",
+    "update:api-env": "node node_modules/@ebp/cli/dist/index.js update-api-env",
+    "update:ebp-deps": "npx npm-check-updates /^@ebp.*$/ -u && yarn",
+    "update:css-vars": "node node_modules/@ebp/cli/dist/index.js update-css-variables",
+    "bundle-analyse": "vite-bundle-visualizer",
+    "prepare": "husky install",
+    "postinstall": "npx check-peer-dependencies"
+  },
+  "devDependencies": {
+    "@ebp/cli": "0.0.21",
+    "@ebp/dev-configs": "0.0.8",
+    "@ebp/dev-utils": "0.1.44",
+    "@ebp/eslint-config": "0.0.17",
+    "@ebp/test-utils": "0.0.17",
+    "@originjs/vite-plugin-federation": "1.3.4",
+    "@types/node": "20.11.16",
+    "@vitejs/plugin-vue": "5.0.3",
+    "husky": "8.0.3",
+    "lint-staged": "14.0.0",
+    "sass": "1.64.2",
+    "ts-morph": "20.0.0",
+    "ts-node": "10.9.1",
+    "typescript": "5.1.6",
+    "vite": "5.2.6",
+    "vite-bundle-visualizer": "0.11.0",
+    "vite-svg-loader": "4.0.0",
+    "vite-tsconfig-paths": "4.2.0",
+    "vitest-sonar-reporter": "0.5.0",
+    "vue-tsc": "1.8.8"
+  },
+  "dependencies": {
+    "@ebp/auto-monitoring-results": "0.0.10",
+    "@ebp/core": "0.0.84",
+    "@ebp/mfe-utils": "0.4.44",
+    "@ebp/notification": "0.0.12",
+    "@ebp/pdf-viewer": "0.0.21",
+    "@ebp/process-status": "^0.0.8",
+    "@ebp/sign": "^0.0.63",
+    "@ebp/utils": "0.4.50",
+    "@ebp/vue-ui-lib": "0.2.49",
+    "pinia": "2.1.7",
+    "vue": "3.3.4",
+    "vue-router": "4.2.4"
+  },
+  "packageManager": "yarn@1.22.19",
+  "engines": {
+    "node": ">=18",
+    "yarn": "1.22.19"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx,vue}": [
+      "eslint --fix"
+    ]
+  },
+  "resolutions": {
+    "vue": "3.3.4"
+  }
+}

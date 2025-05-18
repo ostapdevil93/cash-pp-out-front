@@ -1,0 +1,25 @@
+{
+  "extends": "@ebp/dev-configs/configs/mfe/mfe-tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  },
+  "vueCompilerOptions": {
+    "strictTemplates": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}
