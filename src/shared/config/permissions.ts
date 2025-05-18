@@ -1,0 +1,9 @@
+export const PERMISSION_CODES = ['all'];
+export const PERMISSIONS = {
+  SOME_FUNCTIONALITY: [
+    'TOFK_DOC_LS_0121_CREATE',
+    'TOFK_PC_DOC_LS_0121_CREATE',
+    'TOFK_PC_DOC_KS_0141_CREATE',
+    'TOFK_DOC_KS_0141_CREATE',
+  ],
+};
